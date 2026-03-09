@@ -1,5 +1,5 @@
 import { dateDiffInDays, enumerateDays, formatShortDate } from '../utils/date.js';
-import { statusStyle } from '../data/mockProject.js';
+import { statusStyle } from '../data/status.js';
 
 const DAY_WIDTH = 160;
 

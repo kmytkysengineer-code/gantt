@@ -1,5 +1,5 @@
 import { formatShortDate } from '../utils/date.js';
-import { statusStyle } from '../data/mockProject.js';
+import { statusStyle } from '../data/status.js';
 
 function renderAssignees(task) {
   if (!task.assignees?.length) {

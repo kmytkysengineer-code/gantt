@@ -30,6 +30,7 @@ python3 -m http.server 4173
 ```bash
 cd frontend
 python -m http.server 4173
+
 ```
 
 `http://localhost:4173` を開くとプロジェクト詳細画面が表示されます。
@@ -44,6 +45,17 @@ uvicorn app.main:app --reload --port 8000
 ```
 
 `http://localhost:8000/docs` で Swagger UI を確認できます。
+
+## API設計メモ
+- MVP向け最小API定義: `docs/api-mvp.md`
+
+
+## frontend API接続メモ
+- フロントは `http://localhost:8000/api/v1` をデフォルトのAPIベースURLとして使用します。
+- 変更したい場合は `frontend/index.html` 読み込み前に `window.__API_BASE_URL__` を設定してください。
+- 初回表示時に `GET /projects` で先頭プロジェクトを取得し、
+  `GET /projects/{project_id}` / `GET /projects/{project_id}/tasks` / `GET /projects/{project_id}/gantt` を読み込みます。
+=======
 =======
 
 ## API設計メモ
