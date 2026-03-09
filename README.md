@@ -24,6 +24,13 @@
 ```bash
 cd frontend
 python3 -m http.server 4173
+=======
+
+## 起動方法
+```bash
+cd frontend
+python -m http.server 4173
+
 ```
 
 `http://localhost:4173` を開くとプロジェクト詳細画面が表示されます。
@@ -48,3 +55,8 @@ uvicorn app.main:app --reload --port 8000
 - 変更したい場合は `frontend/index.html` 読み込み前に `window.__API_BASE_URL__` を設定してください。
 - 初回表示時に `GET /projects` で先頭プロジェクトを取得し、
   `GET /projects/{project_id}` / `GET /projects/{project_id}/tasks` / `GET /projects/{project_id}/gantt` を読み込みます。
+=======
+=======
+
+## API設計メモ
+- MVP向け最小API定義: `docs/api-mvp.md`
