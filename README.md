@@ -24,6 +24,12 @@
 ```bash
 cd frontend
 python3 -m http.server 4173
+=======
+
+## 起動方法
+```bash
+cd frontend
+python -m http.server 4173
 ```
 
 `http://localhost:4173` を開くとプロジェクト詳細画面が表示されます。
@@ -38,6 +44,7 @@ uvicorn app.main:app --reload --port 8000
 ```
 
 `http://localhost:8000/docs` で Swagger UI を確認できます。
+=======
 
 ## API設計メモ
 - MVP向け最小API定義: `docs/api-mvp.md`
