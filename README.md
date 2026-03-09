@@ -22,7 +22,7 @@
 ## 起動方法
 ```bash
 cd frontend
-python3 -m http.server 4173
+python -m http.server 4173
 ```
 
 `http://localhost:4173` を開くとプロジェクト詳細画面が表示されます。
