@@ -16,4 +16,28 @@
 - Task detail panel
 
 ## 現在の作業
-- frontend/ui-mock/index.html をもとにフロントを構造化中
+- `frontend/ui-mock/index.html` を元に MVP のフロント土台を構造化
+- `frontend/index.html` からモックデータで画面表示可能
+- `backend/` に FastAPI の最小雛形を追加（インメモリ実装）
+
+## frontend 起動方法
+```bash
+cd frontend
+python3 -m http.server 4173
+```
+
+`http://localhost:4173` を開くとプロジェクト詳細画面が表示されます。
+
+## backend 起動方法
+```bash
+cd backend
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
+```
+
+`http://localhost:8000/docs` で Swagger UI を確認できます。
+
+## API設計メモ
+- MVP向け最小API定義: `docs/api-mvp.md`
