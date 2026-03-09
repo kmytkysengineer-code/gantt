@@ -16,4 +16,13 @@
 - Task detail panel
 
 ## 現在の作業
-- frontend/ui-mock/index.html をもとにフロントを構造化中
+- `frontend/ui-mock/index.html` を元に MVP のフロント土台を構造化
+- `frontend/index.html` からモックデータで画面表示可能
+
+## 起動方法
+```bash
+cd frontend
+python3 -m http.server 4173
+```
+
+`http://localhost:4173` を開くとプロジェクト詳細画面が表示されます。
