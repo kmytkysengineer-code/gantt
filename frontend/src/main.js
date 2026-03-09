@@ -2,7 +2,8 @@ import { Header } from './components/Header.js';
 import { TaskTree } from './components/TaskTree.js';
 import { GanttArea } from './components/GanttArea.js';
 import { TaskDetailPanel } from './components/TaskDetailPanel.js';
-import { mockProject, mockTasks } from './data/mockProject.js';
+import { mockProjectDetailResponse } from './data/mockProject.js';
+import { projectDetailToViewModel } from './data/adapters.js';
 
 const app = document.getElementById('app');
 
@@ -11,6 +12,9 @@ const state = {
   selectedTaskId: 'market-analysis',
   isDetailPanelOpen: true
 };
+
+const screenModel = projectDetailToViewModel(mockProjectDetailResponse);
+const { project: mockProject, tasks: mockTasks } = screenModel;
 
 const taskMap = new Map(mockTasks.map((task) => [task.id, task]));
 
